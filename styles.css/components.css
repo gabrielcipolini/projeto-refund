@@ -1,0 +1,104 @@
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.button-submit {
+    background-color: var(--green-100);
+    border-radius: 0.8rem;
+    min-width: 35.2rem;
+    padding: 1.6rem 2rem;
+
+    /* text */
+    color: white;
+    font: inherit;
+    font-weight: var(--bold);
+
+    &:hover {
+      background-color: var(--green-200);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &[aria-label="Remover item"] {
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    width: 2rem;
+    height: 2rem;
+
+    & img {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: var(--gray-400);
+    }
+  }
+}
+
+label {
+  font: var(--label);
+  text-transform: uppercase;
+}
+
+select {
+  appearance: none;
+  background: url(../assets/icons/caret-down-default.svg) no-repeat center right
+    1.6rem;
+
+  & option {
+    /* color: var(--gray-100); */
+
+    &:checked {
+      font-weight: bold;
+    }
+  }
+
+  &:invalid {
+    color: var(--gray-200);
+  }
+
+  &:focus {
+    background: url(../assets/icons/caret-up.svg) no-repeat center right 1.6rem;
+  }
+}
+
+/* Global styles for input and select */
+input,
+select {
+  border: 1px solid var(--gray-200);
+  border-radius: 0.8rem;
+  outline: .5px;
+  padding: 1.6rem;
+}
+
+.input-field {
+  display: grid;
+  gap: 0.8rem;
+
+  &:has(input:focus),
+  &:has(select:focus) {
+    & label {
+      color: var(--green-100);
+      font-weight: var(--bold);
+    }
+
+    & input,
+    & select {
+      border: 1.5px solid var(--green-100);
+    }
+  }
+}
+
+/* deletar dps */
+body {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem;
+  max-width: 35.2rem;
+}
