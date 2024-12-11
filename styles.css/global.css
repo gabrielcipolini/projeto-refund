@@ -55,6 +55,9 @@
 }
 
 body {
+  background-color: var(--gray-400);
   color: var(--gray-200);
   font: var(--body-md);
 }
+
+

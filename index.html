@@ -15,27 +15,60 @@
     <title>refund</title>
   </head>
   <body>
-    <button class="button-submit">Adicionar despesa</button>
+    <div id="app">
+      <nav>
+        <img src="assets/logo.svg" alt="Logotipo da aplicação Refund" />
+      </nav>
 
-    <button aria-label="Remover item">
-      <img src="assets/icons/remove.svg" alt="" />
-    </button>
+      <form action="">
+        <header>
+          <h1>Solicitação de reembolso</h1>
+          <p>
+            Informe os dados da despesa para solicitar reembolso. <br />A
+            despesa será analisada e reembolsada em até 30 dias.
+          </p>
+        </header>
 
-    <div class="input-field">
-      <label for="name">Nome</label>
-      <input type="text" placeholder="placeholder" id="name" name="name" />
-    </div>
+        <fieldset>
+          <div class="input-field">
+            <label for="expense-name">Título da despesa</label>
+            <input
+              type="text"
+              name="expense-name"
+              id="expense-name"
+              required
+              placeholder="Digite o título da despesa aqui"
+            />
+          </div>
 
-    <div class="input-field">
-      <label for="category">Categoria</label>
-      <select id="category" name="category" required>
-        <option value="" disabled selected hidden>Selecione</option>
-        <option value="food">Alimentação</option>
-        <option value="accommodation">Hospedagem</option>
-        <option value="services">Serviços</option>
-        <option value="transport">Transporte</option>
-        <option value="others">Outros</option>
-      </select>
+          <div class="inputs-row">
+            <div class="input-field">
+              <label for="category">Categoria</label>
+              <select id="category" name="category" required>
+                <option value="" disabled selected hidden>Selecione</option>
+                <option value="food">Alimentação</option>
+                <option value="accommodation">Hospedagem</option>
+                <option value="services">Serviços</option>
+                <option value="transport">Transporte</option>
+                <option value="others">Outros</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="expense-value"> Valor</label>
+              <input
+                type="text"
+                name="expense-value"
+                id="expense-value"
+                required
+                placeholder="0,00"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <button class="button-submit" type="submit">Adicionar despesa</button>
+      </form>
     </div>
   </body>
 </html>

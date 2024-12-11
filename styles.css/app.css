@@ -1,0 +1,33 @@
+#app {
+  max-width: 108.2rem;
+  margin-inline: auto;
+}
+
+form {
+  display: grid;
+  gap: 4rem;
+
+  background-color: var(--gray-500);
+  border-radius: 1.6rem;
+  padding: 4rem;
+  margin-top: 3.2rem;
+  max-width: 46.2rem;
+
+  & h1 {
+    color: var(--gray-100);
+    font: var(--title-lg);
+    margin-bottom: 1.2rem;
+  }
+
+  & fieldset {
+    display: grid;
+    gap: 1.6rem;
+    border: none;
+  }
+}
+
+.inputs-row {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 1.6rem;
+}

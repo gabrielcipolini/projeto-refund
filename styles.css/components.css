@@ -6,7 +6,6 @@ button {
   &.button-submit {
     background-color: var(--green-100);
     border-radius: 0.8rem;
-    min-width: 35.2rem;
     padding: 1.6rem 2rem;
 
     /* text */
@@ -52,8 +51,6 @@ select {
     1.6rem;
 
   & option {
-    /* color: var(--gray-100); */
-
     &:checked {
       font-weight: bold;
     }
@@ -73,8 +70,9 @@ input,
 select {
   border: 1px solid var(--gray-200);
   border-radius: 0.8rem;
-  outline: .5px;
+  outline: 0.5px;
   padding: 1.6rem;
+  width: 100%;
 }
 
 .input-field {
@@ -93,12 +91,4 @@ select {
       border: 1.5px solid var(--green-100);
     }
   }
-}
-
-/* deletar dps */
-body {
-  display: grid;
-  gap: 2rem;
-  margin: 2rem;
-  max-width: 35.2rem;
 }
