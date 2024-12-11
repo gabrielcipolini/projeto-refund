@@ -60,4 +60,7 @@ body {
   font: var(--body-md);
 }
 
-
+small {
+  color: var(--gray-200);
+  font: var(--body-sm);
+}

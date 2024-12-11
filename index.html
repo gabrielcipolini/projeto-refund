@@ -13,62 +13,99 @@
     <link rel="stylesheet" href="styles.css/index.css" />
 
     <title>refund</title>
+    <meta
+      name="description"
+      content="Formulário para solicitação de reembolso com histórico de despesas."
+    />
   </head>
   <body>
-    <div id="app">
-      <nav>
+    <header>
+      <nav class="container">
         <img src="assets/logo.svg" alt="Logotipo da aplicação Refund" />
       </nav>
+    </header>
 
-      <form action="">
-        <header>
-          <h1>Solicitação de reembolso</h1>
-          <p>
-            Informe os dados da despesa para solicitar reembolso. <br />A
-            despesa será analisada e reembolsada em até 30 dias.
-          </p>
-        </header>
+    <div id="app" class="container">
+      <main>
+        <form action="">
+          <header>
+            <h1>Solicitação de reembolso</h1>
+            <p>
+              Informe os dados da despesa para solicitar reembolso. <br />A
+              despesa será analisada e reembolsada em até 30 dias.
+            </p>
+          </header>
 
-        <fieldset>
-          <div class="input-field">
-            <label for="expense-name">Título da despesa</label>
-            <input
-              type="text"
-              name="expense-name"
-              id="expense-name"
-              required
-              placeholder="Digite o título da despesa aqui"
-            />
-          </div>
-
-          <div class="inputs-row">
+          <fieldset>
             <div class="input-field">
-              <label for="category">Categoria</label>
-              <select id="category" name="category" required>
-                <option value="" disabled selected hidden>Selecione</option>
-                <option value="food">Alimentação</option>
-                <option value="accommodation">Hospedagem</option>
-                <option value="services">Serviços</option>
-                <option value="transport">Transporte</option>
-                <option value="others">Outros</option>
-              </select>
-            </div>
-
-            <div class="input-field">
-              <label for="expense-value"> Valor</label>
+              <label for="expense">Título da despesa</label>
               <input
                 type="text"
-                name="expense-value"
-                id="expense-value"
+                name="expense"
+                id="expense"
                 required
-                placeholder="0,00"
+                placeholder="Digite o título da despesa aqui"
               />
             </div>
-          </div>
-        </fieldset>
 
-        <button class="button-submit" type="submit">Adicionar despesa</button>
-      </form>
+            <div class="inputs-row">
+              <div class="input-field">
+                <label for="category">Categoria</label>
+                <select id="category" name="category" required>
+                  <option value="" disabled selected hidden>Selecione</option>
+                  <option value="food">Alimentação</option>
+                  <option value="accommodation">Hospedagem</option>
+                  <option value="services">Serviços</option>
+                  <option value="transport">Transporte</option>
+                  <option value="others">Outros</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label for="expense"> Valor</label>
+                <input
+                  type="text"
+                  name="expense"
+                  id="expense"
+                  required
+                  placeholder="0,00"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="button-submit" type="submit">Adicionar despesa</button>
+        </form>
+      </main>
+
+      <aside>
+        <header>
+          <p>
+            Minhas solicitações <i>&bullet;</i>
+            <span>1 despesas</span>
+          </p>
+
+          <h2><small>R$</small>1.420,57</h2>
+        </header>
+
+        <ul role="list">
+          <li class="expense">
+            <img
+              src="assets/icons/fork-knife.svg"
+              alt="Ícone de tipo da despesa"
+            />
+
+            <div class="expense-info">
+              <strong>Almoço</strong>
+              <span>Alimentação</span>
+            </div>
+
+            <span class="expense-amount"><small>R$</small>1.420,57</span>
+
+            <button type="button" aria-label="Remover item"></button>
+          </li>
+        </ul>
+      </aside>
     </div>
   </body>
 </html>

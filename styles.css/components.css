@@ -29,10 +29,7 @@ button {
     width: 2rem;
     height: 2rem;
 
-    & img {
-      display: block;
-      width: 100%;
-    }
+    background: url(../assets/icons/remove.svg) no-repeat center;
 
     &:hover {
       background-color: var(--gray-400);
@@ -68,7 +65,8 @@ select {
 /* Global styles for input and select */
 input,
 select {
-  border: 1px solid var(--gray-200);
+  background-color: transparent;
+  border: 1px solid var(--gray-300);
   border-radius: 0.8rem;
   outline: 0.5px;
   padding: 1.6rem;
@@ -89,6 +87,7 @@ select {
     & input,
     & select {
       border: 1.5px solid var(--green-100);
+      outline: none;
     }
   }
 }
