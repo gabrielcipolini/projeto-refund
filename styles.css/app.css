@@ -80,7 +80,7 @@ aside {
     gap: 1.6rem;
     list-style-type: none;
 
-    & li {
+    & .expense {
       display: flex;
       align-items: center;
 
